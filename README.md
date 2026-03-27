@@ -4,20 +4,19 @@ A Microsoft Edge extension that detects and decodes obfuscated phone numbers
 on community bulletin boards. People often spell out digits to deter automated
 scrapers — this extension shows you the real number on hover.
 
+Put your mouse cursor over an obfuscated phone number and a tooltip will show the decoded version:
+
+![Example popup](screenshot.png)
+
 ## Installation
+
+**WARNING**: only install this if you are confident you know what you're doing
 
 1. Clone or download this repository
 2. Open Edge and navigate to `edge://extensions`
 3. Enable **Developer mode** (toggle in the bottom-left)
-4. Click **Load unpacked** and select the `phonenumbers` folder
-5. Edit `manifest.json` to set your target site URL in the `matches` array:
-   ```json
-   "matches": [
-     "*://your-site.com/*",
-     "*://www.your-site.com/*"
-   ]
-   ```
-6. Click the reload button on the extension card after editing
+4. Click **Load unpacked** and select this repo's folder
+5. Click the reload button on the extension card after editing
 
 ## How It Works
 
@@ -28,15 +27,6 @@ decoded number in a tooltip.
 
 Plain numeric phone numbers are left untouched.
 
-### What It Decodes
-
-| Obfuscation | Decoded |
-|---|---|
-| Number words | `three` → 3, `seven` → 7, `zero` → 0 |
-| Phonetic zero | `oh` → 0 |
-| Lookalike characters | `O` (letter) → 0 when next to digits |
-| Mixed formats | `509-three two1-four876` → `509-321-4876` |
-
 ## Examples
 
 Below are synthetic examples showing the kinds of obfuscation the extension
@@ -45,48 +35,36 @@ test the extension.
 
 ---
 
-**For Sale: Vintage Bookshelf — $75**
-Beautiful oak bookshelf, 6 feet tall. Located downtown, can help load.
 Call or text 425- three six one 8823
 
 > Decoded: **425-361-8823**
 
 ---
 
-**Room Available — $650/month**
-Quiet neighborhood, shared kitchen, private bath. Available April 1st.
 Please text 360-eight five2-seven190 for details
 
 > Decoded: **360-852-7190**
 
 ---
 
-**Mountain Bike For Sale**
-2023 trail bike, great condition. Asking $1,200 or best offer.
 Message 4O6-553-221nine for pictures
 
 > Decoded: **406-553-2219**
 
 ---
 
-**Mobile Sauna Rental**
-Seats 8, wood-fired, delivered to your location.
 Text Seven- two- eight-195-Six- 3-3-Six. Or email us.
 
 > Decoded: **728-195-6336**
 
 ---
 
-**Free Firewood — You Haul**
-Downed maple, already cut to rounds. First come first served.
 Text. Four one two 685 three seven one nine for info.
 
 > Decoded: **412-685-3719**
 
 ---
 
-**House Cleaning Available**
-Weekly, biweekly, or one-time deep cleans. References available.
 Call nine oh two-four oh 8-5671
 
 > Decoded: **902-408-5671**
