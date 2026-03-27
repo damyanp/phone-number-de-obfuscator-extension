@@ -12,8 +12,7 @@
   "content_scripts": [
     {
       "matches": [
-        "*://example.com/*",
-        "*://www.example.com/*"
+        "<all_urls>"
       ],
       "js": ["decoder.js", "content.js"],
       "css": ["content.css"],
