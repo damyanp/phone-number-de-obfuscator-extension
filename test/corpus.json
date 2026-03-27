@@ -1,0 +1,50 @@
+[
+  {
+    "input": "425- three six one 8823",
+    "expected": "425-361-8823",
+    "patterns": ["number-word"],
+    "note": "words mixed with digit groups, dash-space separator"
+  },
+  {
+    "input": "360-eight five2-seven190",
+    "expected": "360-852-7190",
+    "patterns": ["number-word"],
+    "note": "words jammed against digits within groups"
+  },
+  {
+    "input": "4O6-553-221nine",
+    "expected": "406-553-2219",
+    "patterns": ["lookalike", "number-word"],
+    "note": "letter O for zero + trailing word"
+  },
+  {
+    "input": "Seven- two- eight-195-Six- 3-3-Six",
+    "expected": "728-195-6336",
+    "patterns": ["number-word"],
+    "note": "fully spelled area code with dashes and spaces"
+  },
+  {
+    "input": "Four one two 685 three seven one nine",
+    "expected": "412-685-3719",
+    "patterns": ["number-word"],
+    "note": "all words with spaces, digits in middle"
+  },
+  {
+    "input": "nine oh two-four oh 8-5671",
+    "expected": "902-408-5671",
+    "patterns": ["number-word"],
+    "note": "oh used for zero"
+  },
+  {
+    "input": "Three six zero 217 eight four five two",
+    "expected": "360-217-8452",
+    "patterns": ["number-word"],
+    "note": "fully spelled with digit group in middle"
+  },
+  {
+    "input": "3O6 seven one five 4892",
+    "expected": "306-715-4892",
+    "patterns": ["lookalike", "number-word"],
+    "note": "letter O for zero + number words + digits"
+  }
+]

@@ -1,0 +1,10 @@
+/* Styles for decoded phone number annotations */
+
+.mvpd-decoded {
+  text-decoration: underline dotted #4a90d9;
+  text-underline-offset: 3px;
+  cursor: help;
+  background-color: rgba(74, 144, 217, 0.08);
+  border-radius: 2px;
+  padding: 0 1px;
+}
